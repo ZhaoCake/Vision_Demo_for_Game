@@ -1,0 +1,72 @@
+(pydata) zhaocake@zhaocake-BoDE-WXX9:~/文档/projects/projects/python_projects/color_recog_and_QR$ /home/zhaocake/.conda/envs/pydata/bin/python /home/zhaocake/文档/projects/projects/python_projects/color_recog_and_QR/vision_demo_1.py
+Link: red,blue,green
+Center of all white regions: (352, 366)
+Center of all white regions: (295, 246)
+No white regions found in the image.
+Center of all white regions: (357, 367)
+Center of all white regions: (300, 242)
+No white regions found in the image.
+Center of all white regions: (357, 370)
+Center of all white regions: (293, 263)
+No white regions found in the image.
+Center of all white regions: (352, 370)
+Center of all white regions: (290, 264)
+No white regions found in the image.
+Center of all white regions: (347, 371)
+Center of all white regions: (288, 264)
+No white regions found in the image.
+Center of all white regions: (348, 370)
+Center of all white regions: (287, 264)
+No white regions found in the image.
+Center of all white regions: (348, 369)
+Center of all white regions: (291, 263)
+No white regions found in the image.
+Center of all white regions: (348, 370)
+Center of all white regions: (290, 262)
+No white regions found in the image.
+Center of all white regions: (350, 369)
+Center of all white regions: (301, 244)
+No white regions found in the image.
+Center of all white regions: (355, 369)
+Center of all white regions: (300, 244)
+No white regions found in the image.
+Center of all white regions: (355, 369)
+Center of all white regions: (301, 245)
+No white regions found in the image.
+[0, 1, 2]
+(pydata) zhaocake@zhaocake-BoDE-WXX9:~/文档/projects/projects/python_projects/color_recog_and_QR$ /home/zhaocake/.conda/envs/pydata/bin/python /home/zhaocake/文档/projects/projects/python_projects/color_recog_and_QR/vision_demo_1.py
+Link: red,blue,green
+Center of all white regions: (223, 379)
+Center of all white regions: (312, 197)
+No white regions found in the image.
+Center of all white regions: (227, 378)
+Center of all white regions: (301, 193)
+No white regions found in the image.
+Center of all white regions: (229, 380)
+Center of all white regions: (295, 179)
+No white regions found in the image.
+Center of all white regions: (240, 381)
+Center of all white regions: (293, 175)
+No white regions found in the image.
+Center of all white regions: (251, 379)
+Center of all white regions: (292, 179)
+No white regions found in the image.
+Center of all white regions: (251, 377)
+Center of all white regions: (290, 177)
+No white regions found in the image.
+Center of all white regions: (253, 376)
+Center of all white regions: (292, 182)
+No white regions found in the image.
+Center of all white regions: (251, 377)
+Center of all white regions: (292, 181)
+No white regions found in the image.
+Center of all white regions: (251, 376)
+Center of all white regions: (292, 182)
+No white regions found in the image.
+Center of all white regions: (251, 376)
+Center of all white regions: (289, 191)
+No white regions found in the image.
+Center of all white regions: (249, 379)
+Center of all white regions: (289, 191)
+No white regions found in the image.
+[1, 0, 2]

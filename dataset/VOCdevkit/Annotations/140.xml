@@ -1,0 +1,26 @@
+<annotation>
+    <folder>dataset</folder>
+    <filename>140.jpg</filename>
+    <path>/home/zhaocake/文档/projects/projects/python_projects/mmdetection/make_dataset/dataset/140.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>circle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>917</xmin>
+            <ymin>511</ymin>
+            <xmax>1288</xmax>
+            <ymax>941</ymax>
+        </bndbox>
+    </object>
+</annotation>
