@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
         # detector = ColorDetector(170, 97, 97, 20) # 红色对象
         # detector = ColorDetector(20, 20, 200, 2) # 蓝色对象
-        detector = ColorDetector(210, 25, 25, 20)  # 红色物体
+        detector = ColorDetector(115, 25, 90, 40)  # 圈圈
 
         # 处理图像
         p_color, p_diff, processed_image = detector.process_image(frame)

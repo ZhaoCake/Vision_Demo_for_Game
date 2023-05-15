@@ -7,9 +7,11 @@ import cv2
 import numpy as np
 
 # 读取图像
-img1 = cv2.imread('./img/template_1.png')
+img1 = cv2.imread('../img/template_1.png')
+# 转为灰度
+img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 # img1 = cv2.convertScaleAbs(img1) # 为了显示图像，将图像转为uint8类型
-
+# cv2.imshow('img1', img1)
 # sift特征检测器
 sift = cv2.xfeatures2d.SIFT_create()
 
@@ -20,14 +22,14 @@ kp1, des1 = sift.detectAndCompute(img1, None)
 bf = cv2.BFMatcher()
 
 # 创建VideoCapture对象
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 while True:
     # 读取摄像头图像
     ret, img2 = cap.read()
 
     # 转为灰度图像
-    # img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+    img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
     # 检测关键点和描述符
     kp2, des2 = sift.detectAndCompute(img2, None)
