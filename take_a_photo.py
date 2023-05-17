@@ -6,6 +6,6 @@ cap = cv2.VideoCapture(0)
 # 获取图片
 ret, frame = cap.read()
 # 保存图片
-cv2.imwrite('img/test_for_cross_3.jpg', frame)
+cv2.imwrite('img/test_for_cross.jpg', frame)
 # 释放资源
 cap.release()
