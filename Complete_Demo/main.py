@@ -60,6 +60,8 @@ def qr_code_detect():
 
 def color_catch(color):
     cap = cv2.VideoCapture(0)
+    cap.set(3, 640)
+    cap.set(4, 480)
     while True:
         ret, frame = cap.read()
         if not ret:
@@ -70,7 +72,7 @@ def color_catch(color):
         cv2.imshow("mask", mask)
         cv2.waitKey(100)
         # 如果x在图像中心附近，结束
-        if 50 < x < 90:
+        if 310 < x < 330:
             cap.release()
             cv2.destroyAllWindows()
             return True
@@ -127,6 +129,8 @@ def hough_cross_detection(image):
         # 绘制横向直线
         x1, y1 = 0, int(b1)
         x2, y2 = gray.shape[1] - 1, int(k1 * (gray.shape[1] - 1) + b1)
+        # 计算横向直线斜率
+        k = (y2 - y1) / (x2 - x1)
         cv2.line(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
         # 绘制纵向直线
@@ -138,7 +142,7 @@ def hough_cross_detection(image):
         x0, y0 = int((b2 - b1) / (k1 - k2)), int(k1 * (b2 - b1) / (k1 - k2) + b1)
         cv2.circle(image, (x0, y0), 5, (0, 0, 255), -1)
 
-        return image
+        return image, x0, y0, int(k * 1000)
 
     except Exception as e:
         print("Error:", e)
@@ -147,14 +151,23 @@ def hough_cross_detection(image):
 
 def cross_correct():
     cap = cv2.VideoCapture(0)
+    cap.set(3, 640)
+    cap.set(4, 480)
     while True:
         ret, frame = cap.read()
         if not ret:
             break
-        frame = hough_cross_detection(frame)
+        frame, x0, y0, k = hough_cross_detection(frame)
+        # 如果x在图像中心附近，结束
         cv2.imshow("frame", frame)
         cv2.waitKey(200)
-
+        if abs(x0 - 320) < 5 & abs(y0 - 240) < 5 & abs(k) < 200:
+            cap.release()
+            cv2.destroyAllWindows()
+            return True
+        else:
+            # print the distance from the center
+            print("x0:", x0 - 320, "y0:", y0 - 240, "k:", (k - 200) / 1000)
 
 def main():
     input("Press Enter to start")
@@ -166,8 +179,14 @@ def main():
             print("catch it")
         input("Press Enter to correct")
         # 由于材料限制，特加入一个跳过纠偏的功能
-        if input("Press Enter to correct") == 'n':
+        if input("Press \"n\" to skip") == 'n':
             continue
+        while True:
+            if cross_correct():
+                print("correct it")
+                break
+            else:
+                continue
     print("All done!")
 
 
