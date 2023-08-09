@@ -1,5 +1,8 @@
 # 视觉部分代码（初版+）
 
+仅供我自己@ZhaoCake使用，要是你对于我混乱的文件夹看得明白，拿去用也无妨
+Only for my own use @ ZhaoCake. If you can understand my chaotic folder, it's okay to take it and use it
+
 ## 说明
 
 **注意**：此代码为初版，仅供参考，不保证能够正常运行，也不保证能够满足实际需求，仅供参考。
